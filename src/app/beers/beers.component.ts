@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Beer } from '../beer';
-import { BEERSTEMP } from '../mock-beer';
 
 @Component({
   selector: 'app-beers',
@@ -8,16 +7,29 @@ import { BEERSTEMP } from '../mock-beer';
   styleUrls: ['./beers.component.css']
 })
 export class BeersComponent implements OnInit {
-  beers = BEERSTEMP;
-  // beers: Beer = {
-  //   brandName1: 'Block 15',
-  //
-  // }
-  selectedBeer: Beer;
+  beers: Beer[] = [
+    new Beer('Block 15'),
+    new Beer('Barley Browns'),
+    new Beer('Breakside'),
+    new Beer('Modern Times'),
+    new Beer('Wayfinder'),
+    new Beer('Baerlic'),
+    new Beer('Silvermoon'),
+    new Beer('Pfriem'),
+    new Beer('Ecliptic'),
+    new Beer('Angry Orchard')
+  ];
 
-  onSelect(beer: Beer): void{
+  onSelect(beer: Beer): void {
     this.selectedBeer = beer;
   }
+
+  editBeer(clickedBeer){
+  this.selectedBeer = clickedBeer;
+  }
+
+  selectedBeer = null;
+
   constructor() { }
 
   ngOnInit() {

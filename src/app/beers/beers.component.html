@@ -1,8 +1,11 @@
 <div>
   <ul class="beers-list">
     <li *ngFor="let beer of beers" (click)="onSelect(beer)">
-      <span class="badge"><strong>Tap Number:</strong></span>{{beer.tapNumber}} <span class="badge"><strong>Beer:</strong></span> {{beer.brandName | uppercase}}
+      <!-- <span class="badge"><strong>Tap Number:</strong></span>{{beer.tapNumber}}  -->
+      <!-- {{beer.tapNumber}} -->
+      <span class="badge"><strong>Beer:</strong></span>{{beer.brandName | uppercase}}
     </li>
   </ul>
-  <input [(ngModel)]="selectedBeer.brandName" placeholder="Enter new beer brand" class="form-control">
+  <!-- <li *ngFor="let tap of selectedRecipe.ingredients">{{ingredient}}</li> -->
+  <input [(ngModel)]="selectedBeer.brandName" (clickBeer)="editBeer(clickedBeer)" placeholder="Enter new beer brand" class="form-control">
 </div>
