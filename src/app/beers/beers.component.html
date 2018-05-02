@@ -16,11 +16,23 @@
         <p class="card-text">{{currentBeer.name}}, {{currentBeer.style}}, {{currentBeer.percentage}} ${{currentBeer.price}}</p>
         <button (click)="onSelect(currentBeer)">Edit</button>
         <div *ngIf="selectedBeer === currentBeer">
-          <div class="well">
-            <p>hi</p>
-          </div>
-          <!-- <input [(ngModel)]="selectedBeer.brandName" placeholder="Enter new beer brand" class="form-control">
-          <button (click)="finishedEditing()" class="btn btn-primary">Done Editing</button> -->
+          <!-- <div class="well">
+
+          </div> -->
+          <br>
+          <label for="editBrandName">Brewery Name:</label>
+          <input [(ngModel)]="selectedBeer.brandName" type="text" placeholder="Enter new beer brand" class="form-control">
+          <label for="editName">Beer Name:</label>
+          <input [(ngModel)]="selectedBeer.name" type="text" placeholder="Enter new beer brand" class="form-control">
+          <label for="editStyle">Beer Style:</label>
+          <input [(ngModel)]="selectedBeer.style" type="text" placeholder="Enter new beer brand" class="form-control">
+          <label for="editName">Alcohol by Volume:</label>
+          <input [(ngModel)]="selectedBeer.percentage" type="text" placeholder="Enter new beer brand" class="form-control">
+          <label for="editName">Beer Price:</label>
+          <input [(ngModel)]="selectedBeer.price" type="text" placeholder="Enter new beer brand" class="form-control">
+
+          <br>
+          <button (click)="finishedEditing()" class="btn btn-primary">Done Editing</button>
         </div>
       </div>
     </div>
