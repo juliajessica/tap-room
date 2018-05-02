@@ -21,15 +21,6 @@ export class AppComponent implements OnInit {
     new Beer(10,'Angry Orchard', 'Crisp Apple', 'Apple Cider', 'ABV: 5.8%', 6)
   ];
 
-  onSelect(clickedBeer) {
-    this.selectedBeer = clickedBeer;
-  }
-
-  finishedEditing(){
-    // alert('hi');
-    this.selectedBeer = null;
-  }
-
   finishedAdding(){
     alert('bye');
     this.selectedBeer = null;

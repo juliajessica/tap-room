@@ -1,6 +1,4 @@
-<div class="form-group">
-  <div class="well">
-    <h1>{{title}}</h1>
-    <app-beers [childBeerList]="beers"></app-beers>
-  </div>
-</div>
+<p> hi</p>
+<app-beers [childBeerList]="beers" (clickSender)="finishedEditing($event)"></app-beers>
+<app-add-beer></app-add-beer>
+<app-edit-beer [childSelectedBeer]="selectedBeer"></app-edit-beer>
