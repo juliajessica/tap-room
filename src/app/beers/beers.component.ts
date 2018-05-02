@@ -20,15 +20,22 @@ export class BeersComponent implements OnInit {
     new Beer(10,'Angry Orchard', 'Crisp Apple', 'Apple Cider', 'ABV: 5.8%', 6)
   ];
 
-  onSelect(beer: Beer): void {
-    this.selectedBeer = beer;
+  onSelect(clickedBeer) {
+    this.selectedBeer = clickedBeer;
   }
 
-  editBeer(clickedBeer){
-  this.selectedBeer = clickedBeer;
+  // editBeer(clickedBeer){
+  // this.selectedBeer = clickedBeer;
+  // }
+
+  finishedEditing(){
+    alert('hi');
+    this.selectedBeer = null;
   }
 
   selectedBeer = null;
+
+
 
   constructor() { }
 

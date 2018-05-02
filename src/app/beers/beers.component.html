@@ -1,11 +1,29 @@
-<div>
-  <ul class="beers-list">
-    <li *ngFor="let beer of beers" (click)="onSelect(beer)">
-      <!-- <span class="badge"><strong>Tap Number:</strong></span>{{beer.tapNumber}}  -->
-      <!-- {{beer.tapNumber}} -->
-      <span class="badge"><strong>Beer:</strong></span>{{beer.tapNumber}}) {{beer.brandName | uppercase}}, {{beer.name}}, {{beer.style}}, {{beer.percentage}} ${{beer.price}}
-    </li>
-  </ul>
-  <!-- <li *ngFor="let tap of selectedRecipe.ingredients">{{ingredient}}</li> -->
-  <input [(ngModel)]="selectedBeer.brandName" (clickBeer)="editBeer(clickedBeer)" placeholder="Enter new beer brand" class="form-control">
+<div class="container">
+  <div class="well">
+    <!-- <ul class="beers-list">
+      <li *ngFor="let beer of beers" (click)="onSelect(beer)">
+        <!<span class="badge"><strong>Tap Number:</strong></span>{{beer.tapNumber}}  -->
+        <!-- {{beer.tapNumber}} -->
+        <!-- <span class="badge"><strong>Beer:</strong></span>{{beer.tapNumber}}) {{beer.brandName | uppercase}}, {{beer.name}}, {{beer.style}}, {{beer.percentage}} ${{beer.price}}
+      </li>
+    </ul> -->
+    <!-- <li *ngFor="let tap of selectedRecipe.ingredients">{{ingredient}}</li> -->
+
+    <div class="card" style="width: 18rem;" *ngFor="let currentBeer of beers">
+      <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+      <div class="card-body" >
+        <h5 class="card-title">{{currentBeer.tapNumber}}) {{currentBeer.brandName | uppercase}}</h5>
+        <p class="card-text">{{currentBeer.name}}, {{currentBeer.style}}, {{currentBeer.percentage}} ${{currentBeer.price}}</p>
+        <button (click)="onSelect(currentBeer)">Edit</button>
+        <div *ngIf="selectedBeer === currentBeer">
+          <div class="well">
+            <p>hi</p>
+          </div>
+          <!-- <input [(ngModel)]="selectedBeer.brandName" placeholder="Enter new beer brand" class="form-control">
+          <button (click)="finishedEditing()" class="btn btn-primary">Done Editing</button> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
