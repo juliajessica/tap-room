@@ -4,14 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { BrandComponent } from './brand/brand.component';
 import { BeersComponent } from './beers/beers.component';
+import { AddBeerComponent } from './add-beer/add-beer.component';
+import { EditBeerComponent } from './edit-beer/edit-beer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BrandComponent,
-    BeersComponent
+    BeersComponent,
+    AddBeerComponent,
+    EditBeerComponent
   ],
   imports: [
     BrowserModule,
