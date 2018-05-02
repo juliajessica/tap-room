@@ -33,9 +33,17 @@ export class BeersComponent implements OnInit {
     this.selectedBeer = null;
   }
 
+  finishedAdding(){
+    alert('bye');
+    this.selectedBeer = null;
+  }
+
   selectedBeer = null;
+  // selectedBeerToAdd = null;
 
-
+  addBeer(clickToAdd){
+    this.selectedBeer = clickToAdd;
+  }
 
   constructor() { }
 
