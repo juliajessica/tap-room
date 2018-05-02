@@ -3,7 +3,7 @@
     <li *ngFor="let beer of beers" (click)="onSelect(beer)">
       <!-- <span class="badge"><strong>Tap Number:</strong></span>{{beer.tapNumber}}  -->
       <!-- {{beer.tapNumber}} -->
-      <span class="badge"><strong>Beer:</strong></span>{{beer.brandName | uppercase}}
+      <span class="badge"><strong>Beer:</strong></span>{{beer.tapNumber}}) {{beer.brandName | uppercase}}, {{beer.name}}, {{beer.style}}, {{beer.percentage}} ${{beer.price}}
     </li>
   </ul>
   <!-- <li *ngFor="let tap of selectedRecipe.ingredients">{{ingredient}}</li> -->
