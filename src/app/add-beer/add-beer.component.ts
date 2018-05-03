@@ -1,4 +1,5 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Beer } from './../models/tap-room.model';
 
 @Component({
   selector: 'app-add-beer',
@@ -6,7 +7,12 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./add-beer.component.css']
 })
 export class AddBeerComponent implements OnInit {
+  @Input() childSelectedBeer: Beer;
+  @Output() clickedAdd = new EventEmitter();
 
+  finishedAdding(){
+    this.clickedAdd.emit();
+  }
   constructor() { }
 
   ngOnInit() {

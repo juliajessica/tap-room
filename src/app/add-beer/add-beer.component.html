@@ -1,2 +1,22 @@
-<br>
 <button (click)="addBeer(clickToAdd)">Add Beer</button>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <div *ngIf="childSelectedBeer">
+      <br>
+      <label>Tap Number:</label>
+      <input #tapNumberInput [(ngModel)]="childSelectedBeer.tapNumber" type="text" class="form-control">
+      <label>Brewery Name:</label>
+      <input #breweryNameInput  [(ngModel)]="childSelectedBeer.brandName" type="text" class="form-control">
+      <label>Beer Name:</label>
+      <input #beerNameInput [(ngModel)]="childSelectedBeer.name" type="text" class="form-control">
+      <label>Beer Style:</label>
+      <input #beerStyleInput [(ngModel)]="childSelectedBeer.style" type="text" class="form-control">
+      <label>Alcohol by Volume:</label>
+      <input #abvInput [(ngModel)]="childSelectedBeer.percentage" type="text" class="form-control">
+      <label>Beer Price:</label>
+      <input #beerPriceInput [(ngModel)]="childSelectedBeer.price" type="text" class="form-control">
+      <br>
+      <button (click)="submitForm(tapNumberInput.value, breweryNameInput.value, beerNameInput.value, beerStyleInput.value, abvInput.value, beerPriceInput.value);" class="btn btn-primary">Save Changes</button>
+    </div>
+  </div>
+</div>

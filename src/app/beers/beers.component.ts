@@ -11,10 +11,16 @@ import { Beer } from './../models/tap-room.model';
 export class BeersComponent implements OnInit {
   @Input() childBeerList: Beer[];
   @Output() clickSender = new EventEmitter();
+  @Output() clickAdd = new EventEmitter();
 
   editButtonClicked(beerToEdit: Beer) {
     // console.log(beerToEdit.brandName);
     this.clickSender.emit(beerToEdit);
+  }
+
+  addButtonClicked(beerToAdd: Beer) {
+    // console.log(beerToEdit.brandName);
+    this.clickAdd.emit(beerToAdd);
   }
 
   constructor() { }
