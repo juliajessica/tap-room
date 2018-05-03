@@ -18,10 +18,10 @@ export class BeersComponent implements OnInit {
     this.clickSender.emit(beerToEdit);
   }
 
-  addButtonClicked(beerToAdd: Beer) {
-    // console.log(beerToEdit.brandName);
-    this.clickAdd.emit(beerToAdd);
-  }
+  // addButtonClicked(beerToAdd: Beer) {
+  //   // console.log(beerToEdit.brandName);
+  //   this.clickAdd.emit(beerToAdd);
+  // }
 
   constructor() { }
 

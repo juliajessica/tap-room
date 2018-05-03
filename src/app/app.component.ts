@@ -28,10 +28,9 @@ export class AppComponent implements OnInit {
   selectedBeer = null;
   // selectedBeerToAdd = null;
 
-  // addBeer(clickToAdd){
-  //   alert("hi");
-  //   this.selectedBeer = clickToAdd;
-  // }
+  addBeer(newBeer: Beer) {
+    this.beers.push(newBeer);
+  }
 
   editBeer(clickedBeer){
     // console.log(clickedBeer.brandName);

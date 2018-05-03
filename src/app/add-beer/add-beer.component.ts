@@ -10,9 +10,14 @@ export class AddBeerComponent implements OnInit {
   @Input() childSelectedBeer: Beer;
   @Output() clickedAdd = new EventEmitter();
 
-  finishedAdding(){
-    this.clickedAdd.emit();
+  submitForm(tapNumber: number, breweryName: string, beerName: string, beerStyle: string, abv: string, beerPrice: number) {
+   let addBeer: Beer = new Beer(tapNumber, breweryName, beerName, beerStyle, abv, beerPrice);
+   this.clickedAdd.emit(addBeer);
   }
+
+  // finishedAdding(){
+  //   this.clickedAdd.emit();
+  // }
   constructor() { }
 
   ngOnInit() {
