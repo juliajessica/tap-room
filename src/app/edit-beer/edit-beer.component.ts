@@ -1,4 +1,4 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import { Beer } from './../models/tap-room.model';
 
 @Component({
@@ -8,14 +8,14 @@ import { Beer } from './../models/tap-room.model';
 })
 export class EditBeerComponent implements OnInit {
   @Input() childSelectedBeer: Beer;
+  @Output() clickedDone = new EventEmitter();
+
+  finishedEditing(){
+    this.clickedDone.emit();
+  }
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  finishedEditing(){
-    alert('hi');
-    this.childSelectedBeer = null;
   }
 }

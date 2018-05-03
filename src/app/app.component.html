@@ -1,4 +1,3 @@
-<p> hi</p>
-<app-beers [childBeerList]="beers" (clickSender)="finishedEditing($event)"></app-beers>
+<app-beers [childBeerList]="beers" (clickSender)="editBeer($event)"></app-beers>
 <app-add-beer></app-add-beer>
-<app-edit-beer [childSelectedBeer]="selectedBeer"></app-edit-beer>
+<app-edit-beer [childSelectedBeer]="selectedBeer" (doneButtonClickedSender)="finishedEditing()"></app-edit-beer>

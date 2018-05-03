@@ -1,23 +1,23 @@
-<div *ngIf="childSelectedBeer === currentBeer">
+<div *ngIf="childSelectedBeer === selectedBeer">
   <br>
   <label for="editBrandName">Tap Number:</label>
-  <input [(ngModel)]="selectedBeer.tapNumber" type="text" class="form-control">
+  <input [(ngModel)]="childSelectedBeer.tapNumber" type="text" class="form-control">
   <label for="editBrandName">Brewery Name:</label>
-  <input [(ngModel)]="selectedBeer.brandName" type="text" class="form-control">
+  <input [(ngModel)]="childSelectedBeer.brandName" type="text" class="form-control">
   <label for="editName">Beer Name:</label>
-  <input [(ngModel)]="selectedBeer.name" type="text" class="form-control">
+  <input [(ngModel)]="childSelectedBeer.name" type="text" class="form-control">
   <label for="editStyle">Beer Style:</label>
-  <input [(ngModel)]="selectedBeer.style" type="text" class="form-control">
+  <input [(ngModel)]="childSelectedBeer.style" type="text" class="form-control">
   <label for="editName">Alcohol by Volume:</label>
-  <input [(ngModel)]="selectedBeer.percentage" type="text" class="form-control">
+  <input [(ngModel)]="childSelectedBeer.percentage" type="text" class="form-control">
   <label for="editName">Beer Price:</label>
-  <input [(ngModel)]="selectedBeer.price" type="text" class="form-control">
+  <input [(ngModel)]="childSelectedBeer.price" type="text" class="form-control">
   <br>
   <button (click)="finishedEditing()" class="btn btn-primary">Done Editing</button>
 </div>
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <div *ngIf="childSelectedBeer === currentBeer">
+    <div *ngIf="childSelectedBeer">
       <br>
       <label for="editBrandName">Tap Number:</label>
       <input [(ngModel)]="childSelectedBeer.tapNumber" type="text" class="form-control">
@@ -33,6 +33,7 @@
       <input [(ngModel)]="childSelectedBeer.price" type="text" class="form-control">
       <br>
       <button (click)="finishedAdding()" class="btn btn-primary">Done Editing</button>
+      <!-- not working yet ^^^ -->
     </div>
   </div>
 </div>

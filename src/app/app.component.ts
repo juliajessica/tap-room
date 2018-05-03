@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
   ];
 
   finishedAdding(){
-    alert('bye');
     this.selectedBeer = null;
   }
 
@@ -31,6 +30,15 @@ export class AppComponent implements OnInit {
 
   addBeer(clickToAdd){
     this.selectedBeer = clickToAdd;
+  }
+
+  editBeer(clickedBeer){
+    // console.log(clickedBeer.brandName);
+    this.selectedBeer = clickedBeer;
+  }
+
+  finishedEditing(){
+    this.selectedBeer = null;
   }
 
   constructor() { }

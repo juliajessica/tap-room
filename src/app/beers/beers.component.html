@@ -9,7 +9,7 @@
             <h5 class="card-title">{{currentBeer.tapNumber}}) {{currentBeer.brandName | uppercase}}</h5>
             <p class="card-text">{{currentBeer.name}}, {{currentBeer.style}}, {{currentBeer.percentage}} ${{currentBeer.price}}</p>
             <!-- <p id="newBeerAdded"></p> -->
-            <button (click)="editButtonClicked(clickedBeer)">Edit</button>
+            <button (click)="editButtonClicked(currentBeer)">Edit</button>
           </div>
         </div>
       </div>
