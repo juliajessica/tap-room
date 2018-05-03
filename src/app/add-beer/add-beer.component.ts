@@ -10,8 +10,8 @@ export class AddBeerComponent implements OnInit {
   @Input() childSelectedBeer: Beer;
   @Output() clickedAdd = new EventEmitter();
 
-  submitForm(tapNumber: number, breweryName: string, beerName: string, beerStyle: string, abv: string, beerPrice: number) {
-   let addBeer: Beer = new Beer(tapNumber, breweryName, beerName, beerStyle, abv, beerPrice);
+  submitForm(tapNumber: number, breweryName: string, beerName: string, beerStyle: string, abv: string, beerPrice: number, url: string) {
+   let addBeer: Beer = new Beer(tapNumber, breweryName, beerName, beerStyle, abv, beerPrice, url);
    this.clickedAdd.emit(addBeer);
   }
 
